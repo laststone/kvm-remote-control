@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+</head>
+<body>
+<h3>运行虚拟机:</h3>
+<ul>
+{%for name in run_list%}
+<li>{{name}}  <a href="vmx_shut_{{name}}">停止</a>  <a href="vmx_suspend_{{name}}">挂起</a></li>
+{%endfor%}
+</ul>
+<h3>停止虚拟机:</h3>
+<ul>
+{%for name in shut_list%}
+<li>{{name}}  <a href="vmx_start_{{name}}">启动</a></li>
+{%endfor%}
+</ul>
+<h3>挂起虚拟机:</h3>
+<ul>
+{%for name in suspend_list%}
+<li>{{name}}  <a href="vmx_resume_{{name}}">恢复</a></li>
+{%endfor%}
+</ul>
+</body>
+</html>
